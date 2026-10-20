@@ -1,0 +1,35 @@
+{
+  "name": "@astral/server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "bench": "node bench/runBench.js"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.26.10",
+    "@babel/traverse": "^7.26.10",
+    "@octokit/rest": "^21.1.1",
+    "adm-zip": "^0.5.16",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "jsonc-parser": "^3.3.1",
+    "mongoose": "^8.9.5",
+    "multer": "^2.0.2",
+    "piscina": "^4.8.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

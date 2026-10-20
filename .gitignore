@@ -1,0 +1,8 @@
+node_modules/
+.env
+server/.env
+server/cache/
+server/tmp/
+client/dist/
+coverage/
+.DS_Store
