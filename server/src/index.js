@@ -11,7 +11,9 @@ async function main() {
   await mongoose.connect(config.mongoUri, { serverSelectionTimeoutMS: 10000 });
   logger.info('Connected to MongoDB');
   const app = createApp();
-  const server = app.listen(config.port, () => logger.info(`Astral Cartographer API listening on http://localhost:${config.port}`));
+  const server = app.listen(config.port, '0.0.0.0', () => {
+    logger.info(`Astral Cartographer API listening on port ${config.port}`);
+  });
 
   const shutdown = async signal => {
     logger.info(`Received ${signal}; shutting down.`);
